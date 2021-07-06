@@ -1,5 +1,5 @@
 {
-  "name": "parchment",
+  "name": "@shortwave/parchment",
   "version": "2.0.0-dev.2",
   "description": "A document model for rich text editors",
   "author": "Jason Chen <jhchen7@gmail.com>",
@@ -11,6 +11,7 @@
     "src"
   ],
   "types": "dist/parchment.d.ts",
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.8.6",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
@@ -62,7 +63,10 @@
   "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
-    "url": "https://github.com/quilljs/parchment"
+    "url": "https://github.com/shortwave/parchment"
+  },
+  "publishConfig": {
+    "@shortwave:registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "build": "webpack --config webpack.conf.js",
@@ -74,6 +78,5 @@
   },
   "bugs": {
     "url": "https://github.com/quilljs/parchment/issues"
-  },
-  "dependencies": {}
+  }
 }
