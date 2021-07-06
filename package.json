@@ -10,7 +10,7 @@
     "dist",
     "src"
   ],
-  "types": "dist/src/parchment.d.ts",
+  "types": "dist/parchment.d.ts",
   "devDependencies": {
     "@babel/core": "^7.8.6",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
