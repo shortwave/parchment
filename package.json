@@ -71,7 +71,7 @@
   "scripts": {
     "build": "webpack --config webpack.conf.js",
     "lint": "eslint 'src/**/*.ts'",
-    "prepare": "npm run build",
+    "prepack": "npm run build",
     "test": "karma start",
     "test:server": "karma start --no-single-run",
     "test:travis": "karma start --browsers saucelabs-chrome --reporters dots,saucelabs"
