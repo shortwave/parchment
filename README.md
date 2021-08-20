@@ -7,9 +7,7 @@ Parchment is [Quill](https://quilljs.com)'s document model. It is a parallel tre
 To make a release preform the following steps:
 
 ```shell
-# Edit version in package.json
-npm pack
-gh release create $VERSION shortwave-parchment-$VERSION.tgz
+npm run release
 ```
 
 ## Blots
