@@ -1,6 +1,7 @@
 import ContainerBlot from './blot/abstract/container';
 import LeafBlot from './blot/abstract/leaf';
 import ParentBlot from './blot/abstract/parent';
+import {Blot, BlotConstructor} from './blot/abstract/blot';
 
 import BlockBlot from './blot/block';
 import EmbedBlot from './blot/embed';
@@ -31,4 +32,6 @@ export {
   AttributorStore,
   Registry,
   Scope,
+  Blot,
+  BlotConstructor,
 };
