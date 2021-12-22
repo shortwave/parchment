@@ -59,6 +59,9 @@ class LinkedList<T extends LinkedNode> {
     if (node == null) {
       return;
     }
+    if (node === refNode) {
+      throw new CircularListError(node);
+    }
     this.remove(node);
     node.next = refNode;
     if (refNode != null) {
@@ -195,6 +198,24 @@ class LinkedList<T extends LinkedNode> {
       cur = next();
     }
     return memo;
+  }
+}
+
+class CircularListError extends Error {
+  constructor(node: unknown) {
+    const domNode = CircularListError.getDomNode(node);
+    let domDebugString = domNode?.nodeName;
+    if (domNode instanceof HTMLElement) {
+      domDebugString += domNode.getAttributeNames().map((name) => `${name}=${domNode.getAttribute(name)}`).join(" ");
+    }
+    super(`ERROR: invalid circular linked list in quill: ${node} <${domDebugString}>`);
+  }
+
+  private static getDomNode(node: unknown): Node | null {
+    if (typeof node !== 'object' || !node) return null;
+    if (!('domNode' in node)) return null;
+    const domNode = (node as {domNode: Node}).domNode;
+    return domNode instanceof Node ? domNode : null;
   }
 }
 
